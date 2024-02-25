@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-100 font-poppins capitalize">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fashion web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Macondo&family=Poppins&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--ALPINE JS-->
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="overflow-x-hidden">
+
+    <div class="hero-conatiner h-screen w-screen max-w-full overflow-x-hidden">
+        <!-- NAVIGATION -->
+        <div x-data="{open: false}" class="navigation-bar font-bold uppercase flex gap-4 justify-between  ">
+
+            <div class="main-nav my-1 items-center flex gap-7">
+
+                <div class="nav-logo ml-2 font-macondo text-xl">vio de lora.</div>
+
+                <div :class="open ? '' : 'translate-x-[100%]'"
+                    class="nav-links bg-slate-400 border-l-2 border-slate-800 transition-all ease-in-out duration-100 top-0 absolute right-0 w-60 h-screen sm:relative sm:h-fit sm:w-max sm:translate-x-[0%] sm:bg-transparent sm:border-none z-50">
+
+                    <ul class="z-50 flex flex-col gap-4 items-center text-slate-500 h-full sm:flex-row">
+                        <span>
+                            <i x-on:click="open = ! open"
+                                class="bi bi-x text-2xl sm:hidden absolute right-2 top-2 px-1 rounded-full hover:bg-slate-500 hover:text-slate-300"></i>
+                        </span>
+                        <li class="mt-8 sm:m-0"><a x-on:click="open = false" href="#" class="a-nav-links ">home</a></li>
+                        <li><a x-on:click="open = false" href="#" class="a-nav-links">shop</a></li>
+                        <li><a x-on:click="open = false" href="#" class="a-nav-links">man</a></li>
+                        <li><a x-on:click="open = false" href="#" class="a-nav-links">woman</a></li>
+                        <li><a x-on:click="open = false" href="#" class="a-nav-links">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-buttons my-1 mr-4 flex items-center">
+                <span><i class="bi bi-cart-plus mr-2 text-2xl px-1 rounded hover:bg-slate-400"></i></span>
+                <span><i x-on:click="open = ! open"
+                        class=" bi bi-list text-2xl px-1 rounded hover:bg-slate-400 sm:hidden"></i></span>
+            </div>
+
+        </div>
+
+
+
+        <!-- HERO SECTION -->
+        <div class="hero-section h-full flex items-center ">
+            <div class="hero-container sm:mx-40 flex flex-col min-h-fit gap-4 px-10 uppercase text-center">
+                <p class="text-sm font-robotoMono tracking-widest sm:text-md">lora's official store</p>
+                <h1 class="capitalize text-4xl font-bold sm:text-5xl">luxury <br>everything.</h1>
+                <button class="bold-home-btn hover-btn sm:text-lg">explore
+                    now</button>
+            </div>
+        </div>
+
+        <!-- women section -->
+        <div class="women-section justify-around h-fit flex flex-col gap-2 md:flex-row">
+            <div class="content-head relative md:my-auto"> <!--important-->
+                <div class="title-ct text-3xl font-bold underline my-4 absolute bottom-0 md:relative md:text-center">
+                    #forher
+                </div>
+                <!--important-->
+                <div class="img-ct mx-auto overflow-hidden bg-yellow-300 md:w-[354px] md:h-[472px] ">
+                    <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" class="" alt="">
+                </div>
+            </div>
+            <div class="content-items mb-5 lg:w-[60%]">
+                <div class="list-items-menu py-3 mb-2">
+                    <ul
+                        class="flex gap-4 uppercase font-bold flex-wrap text-slate-700 justify-center lg:justify-start ">
+                        <li><a href="#">all</a></li>
+                        <li><a href="#">blazer</a></li>
+                        <li><a href="#">dresses</a></li>
+                        <li><a href="#">jackets</a></li>
+                        <li><a href="#">accessories</a></li>
+                    </ul>
+                </div>
+                <div class="items-image-menu ">
+                    <div
+                        class="item-card grid grid-cols-2 justify-items-center auto-rows-auto gap-1 lg:grid-cols-3 md:gap-5 md:justify-items-start">
+                        <!-- important-->
+
+                        <div class="card-container h-[270px] w-[175px]  relative">
+                            <div class="ididji">
+                                <span class="absolute right-0 mx-2 my-2 text-lg"><i class="bi bi-heart"></i></span>
+                                <p class="badge-stat top-3 px-1 bg-orange-200 absolute ">new</p>
+                                <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" alt=""
+                                    class="h-[220px] w-full bg-purple-400">
+                            </div>
+                            <div class="card-info text-center">
+                                <p class="brand-title">sonic speed</p>
+                                <p class="brand-price font-bold">$200.00</p>
+                            </div>
+                        </div>
+
+                        <div class="card-container h-[270px] w-[175px]  relative">
+                            <div class="ididji">
+                                <span class="absolute right-0 mx-2 my-2 text-lg"><i class="bi bi-heart"></i></span>
+                                <p class="badge-stat top-3 px-1 bg-orange-200 absolute ">new</p>
+                                <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" alt=""
+                                    class="h-[220px] w-full bg-purple-400">
+                            </div>
+                            <div class="card-info text-center">
+                                <p class="brand-title">sonic speed</p>
+                                <p class="brand-price font-bold">$200.00</p>
+                            </div>
+                        </div>
+
+                        <div class="card-container h-[270px] w-[175px]  relative">
+                            <div class="ididji">
+                                <span class="absolute right-0 mx-2 my-2 text-lg"><i class="bi bi-heart"></i></span>
+                                <p class="badge-stat top-3 px-1 bg-orange-200 absolute ">new</p>
+                                <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" alt=""
+                                    class="h-[220px] w-full bg-purple-400">
+                            </div>
+                            <div class="card-info text-center">
+                                <p class="brand-title">sonic speed</p>
+                                <p class="brand-price font-bold">$200.00</p>
+                            </div>
+                        </div>
+
+                        <div class="card-container h-[270px] w-[175px]  relative">
+                            <div class="ididji">
+                                <span class="absolute right-0 mx-2 my-2 text-lg"><i class="bi bi-heart"></i></span>
+                                <p class="badge-stat top-3 px-1 bg-orange-200 absolute ">new</p>
+                                <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" alt=""
+                                    class="h-[220px] w-full bg-purple-400">
+                            </div>
+                            <div class="card-info text-center">
+                                <p class="brand-title">sonic speed</p>
+                                <p class="brand-price font-bold">$200.00</p>
+                            </div>
+                        </div>
+
+                        <div class="card-container h-[270px] w-[175px]  relative">
+                            <div class="ididji">
+                                <span class="absolute right-0 mx-2 my-2 text-lg"><i class="bi bi-heart"></i></span>
+                                <p class="badge-stat top-3 px-1 bg-orange-200 absolute ">new</p>
+                                <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" alt=""
+                                    class="h-[220px] w-full bg-purple-400">
+                            </div>
+                            <div class="card-info text-center">
+                                <p class="brand-title">sonic speed</p>
+                                <p class="brand-price font-bold">$200.00</p>
+                            </div>
+                        </div>
+
+                        <div class="card-container h-[270px] w-[175px]  relative">
+                            <div class="ididji">
+                                <span class="absolute right-0 mx-2 my-2 text-lg"><i class="bi bi-heart"></i></span>
+                                <p class="badge-stat top-3 px-1 bg-orange-200 absolute ">new</p>
+                                <img src="image/Color Hunt Palette f6f1f1afd3e219a7ce146c94.png" alt=""
+                                    class="h-[220px] w-full bg-purple-400">
+                            </div>
+                            <div class="card-info text-center">
+                                <p class="brand-title">sonic speed</p>
+                                <p class="brand-price font-bold">$200.00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner -->
+        <div class="banner bg-red-300 h-screen">
+            <p class="banner-tag">#newarrivals</p>
+            <p class="banner-text">e-commerce fashion site</p>
+            <p class="banner-link">shop-now</p>
+        </div>
+
+        <!-- man section -->
+        <div class="man-section bg-blue-400 h-screen">
+            <div class="content-head">
+                <div class="title-ct">#forhim</div>
+                <div class="img-ct">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="content-items">
+                <div class="list-items-menu">
+                    <ul>
+                        <li><a href="#">all</a></li>
+                        <li><a href="#">blazer</a></li>
+                        <li><a href="#">trousers</a></li>
+                        <li><a href="#"> jackets</a></li>
+                        <li><a href="#">accessories</a></li>
+                    </ul>
+                </div>
+                <div class="items-image-menu">
+                    <div class="item-card">
+                        <div class="show-ct">
+                            <span class="hidden">love</span>
+                            <p class="badge-stat">new</p>
+                            <img src="" alt="">
+                            <p class="brand-title"></p>
+                            <p class="brand-price">$200.00</p>
+                        </div>
+                        <div class="over-ct hidden">
+                            <span>h</span>
+                            <span>y</span>
+                            <span>s</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- product association -->
+        <div class="product-asso bg-pink-400 h-screen">
+            <div class="product-preview">
+                <img src="" alt="">
+            </div>
+            <div class="association">
+                <img src="" alt="company-1">
+                <img src="" alt="company-1">
+                <img src="" alt="company-1">
+                <img src="" alt="company-1">
+                <img src="" alt="company-1">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
